@@ -1,0 +1,27 @@
+﻿<h1>Projects</h1>
+
+<p *ngIf="!projectList"><em>Loading...</em></p>
+<!--<p>
+    <a [routerLink]="['/register-project']">Create New</a>
+</p>-->
+<table class='table' *ngIf="projectList">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Duration</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let proj of projectList">
+            <td>{{ proj.name }}</td>
+            <td>{{ proj.duration }}</td>
+            <td>
+            <td>
+                <!--<a [routerLink]="['/employee/edit/', emp.id]">Edit</a> |
+                <a [routerLink]="" (click)="delete(emp.id)">Delete</a>-->
+            </td>
+        </tr>
+    </tbody>
+</table>
